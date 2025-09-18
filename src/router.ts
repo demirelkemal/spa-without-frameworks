@@ -4,7 +4,6 @@ export async function router(path: string): Promise<VNode> {
   switch (path) {
     case "/":
       const { HomePage } = await import("./pages/home.ts");
-      console.log(HomePage());
       return HomePage();
     case "/tasks":
       const { TasksPage } = await import("./pages/tasks.ts");
